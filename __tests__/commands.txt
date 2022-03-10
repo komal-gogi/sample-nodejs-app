@@ -9,6 +9,6 @@ docker stack deploy -c docker-compose.yml swarmnodeapp
 Check Service list: 
 docker service ls
 
-Scalig:
+Scaling:
 
 docker service scale swarmnodeapp_nodejs=20
