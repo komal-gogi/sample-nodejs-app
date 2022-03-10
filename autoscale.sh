@@ -6,7 +6,7 @@ cd sample-nodejs-app
 
 #Initializing Docker swarm
 docker swarm init
-echo -e '\n \n'
+echo -e '\n\n'
 
 #we can join manager node to worker using "docker swarm join --token ip"
 
