@@ -21,17 +21,17 @@ services:
        parallelism: 3
        delay: 10s
 
-  proxy:
-      build:
-        context: .
-        dockerfile: Dockerfile.nginx
-      image: nginx_proxy:v1
-      ports:
-        - 80:80
-      # depends_on:
-      #   - nodeapp
-      deploy:
-        placement:
-          constraints: [node.role == manager]
-      depends_on:
-        - nodejs
+  # proxy:
+  #     build:
+  #       context: .
+  #       dockerfile: Dockerfile.nginx
+  #     image: nginx_proxy:v1
+  #     ports:
+  #       - 80:80
+  #     # depends_on:
+  #     #   - nodeapp
+  #     deploy:
+  #       placement:
+  #         constraints: [node.role == manager]
+  #     depends_on:
+  #       - nodejs
