@@ -1,4 +1,4 @@
-FROM mhart/alpine-node:12 as development
+FROM mhart/alpine-node:12
 
 # Create app directory
 WORKDIR /usr/src/app
@@ -9,14 +9,11 @@ WORKDIR /usr/src/app
 COPY package*.json ./
 
 RUN npm install
+# If you are building your code for production
+# RUN npm ci --only=production
 
 # Bundle app source
 COPY . .
 
 EXPOSE 8080
 CMD [ "node", "server.js" ]
-
-FROM mhart/alpine-node:12 as test
-WORKDIR /usr/src/app
-COPY --from=development /usr/src/app/ .
-RUN ["npm", "run", "test"]
