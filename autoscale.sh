@@ -1,12 +1,16 @@
 #!/bin/bash
   
-# # Clone the repository sample-nodejs-app.
-# git clone https\://github.com/komal-gogi/sample-nodejs-app
-# cd sample-nodejs-app
+# Clone the repository sample-nodejs-app.
+git clone https\://github.com/komal-gogi/sample-nodejs-app
+cd sample-nodejs-app
 
-# # Initializing Docker swarm.
-# docker swarm init
-# echo -e '\n\n'
+# Build the docker image.
+docker-compose Build
+echo -e '\n\n'
+
+# Initializing Docker swarm.
+docker swarm init
+echo -e '\n\n'
 
 # We can join manager node to worker using "docker swarm join --token ip" command.
 
