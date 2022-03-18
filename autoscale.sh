@@ -5,7 +5,7 @@ git clone https\://github.com/komal-gogi/sample-nodejs-app
 cd sample-nodejs-app
 
 # Build the docker image.
-docker-compose Build
+docker-compose build
 echo -e '\n\n'
 
 # Initializing Docker swarm.
